@@ -144,20 +144,21 @@
     object-fit: contain; /* Prevenir deformación */
 }
 
-/* Alineación de los iconos en "Los tres pilares de mi método" */
+/* 4) Alineación de los iconos en "Los tres pilares de mi método" */
 @media (max-width: 767px) {
+    /* Corrección: Centrado de iconos y títulos en sección Pilares */
     .pillar-card {
-        text-align: left;
+        text-align: center;
         padding: 20px;
     }
 
     .pillar-icon {
-        margin: 0 0 15px 0;
-        display: inline-flex;
-        justify-content: flex-start;
+        margin: 0 auto 15px auto;
+        display: flex;
+        justify-content: center;
     }
-
-    /* Alinear los textos de la sección Testimonios */
+    
+    /* Corrección: Alinear los textos de la sección Testimonios */
     .testimonial-content {
         text-align: left;
         padding: 15px;
@@ -167,16 +168,20 @@
         padding: 0 10px;
     }
 
-    /* Alinear a la izquierda los iconos de Contacto */
+    /* 5) Corrección: Alinear a la izquierda los iconos de Contacto */
     .contact-item {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         margin-bottom: 20px;
+        text-align: left;
     }
 
     .contact-icon {
         margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .contact-text {
@@ -223,6 +228,16 @@
     .video-container {
         width: 50%;
     }
+    
+    /* 1) Corrección: Alineación a la izquierda en Sobre Mi */
+    .about-content {
+        text-align: left;
+    }
+    
+    .section-title::after {
+        left: 0;
+        transform: translateX(0);
+    }
 }
 
 /* Tablets y landscape en móviles (768px a 991px) */
@@ -251,19 +266,31 @@
         margin-bottom: 40px;
     }
 
-    .about-content, .ebook-content {
-        text-align: center;
+    /* 1) Corrección: Alineación a la izquierda en Sobre Mi */
+    .about-content {
+        text-align: left;
     }
-
+    
     .section-title::after {
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        transform: translateX(0);
     }
 
+    /* 3) Corrección: Alineación a la izquierda de la lista de características del ebook */
     .feature-list {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .feature-item {
+        display: flex;
         align-items: center;
+        text-align: left;
+    }
+    
+    .feature-item i {
+        margin-right: 15px;
     }
 
     .video-container {
@@ -278,8 +305,11 @@
         height: 380px;
     }
     
+    /* 2) Corrección: Centrado de números en estadísticas */
     .stat-number {
         text-align: center;
+        width: 100%;
+        display: block;
     }
 }
 
@@ -316,13 +346,15 @@
 
     .about-section, .ebook-container {
         flex-direction: column;
-        text-align: center;
+        /* 1) Corrección: Alineación a la izquierda en Sobre Mi */
+        text-align: left;
         padding: 80px 5%;
     }
 
     .section-title::after {
-        left: 50%;
-        transform: translateX(-50%);
+        /* 1) Corrección: Alineación a la izquierda */
+        left: 0;
+        transform: translateX(0);
     }
 
     .stats-container {
@@ -333,6 +365,13 @@
     .stat-item {
         flex: 0 0 45%;
         margin-bottom: 30px;
+    }
+    
+    /* 2) Corrección: Centrado de números en estadísticas */
+    .stat-number {
+        text-align: center;
+        width: 100%;
+        display: block;
     }
 
     .video-container {
@@ -361,17 +400,38 @@
 
     .contact-info {
         margin-bottom: 40px;
-        text-align: center;
+        /* 5) Corrección: Alineación a la izquierda de la información de contacto */
+        text-align: left;
     }
 
     .contact-details {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* 5) Corrección: Alineación a la izquierda */
+        align-items: flex-start;
     }
 
     .form-row {
         flex-direction: column;
+    }
+    
+    /* 3) Corrección: Alineación a la izquierda de la lista de características del ebook */
+    .feature-list {
+        text-align: left;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .feature-item i {
+        margin-right: 15px;
+    }
+    
+    .ebook-content {
+        text-align: left;
     }
 }
 
@@ -415,13 +475,19 @@
         padding: 60px 5%;
     }
 
-    .about-content, .ebook-content {
-        text-align: center;
+    /* 1) Corrección: Alineación a la izquierda en Sobre Mi */
+    .about-content {
+        text-align: left;
     }
-
+    
     .section-title::after {
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        transform: translateX(0);
+    }
+    
+    /* 3) Corrección: Alineación a la izquierda del contenido del ebook */
+    .ebook-content {
+        text-align: left;
     }
 
     .stats-container {
@@ -430,6 +496,13 @@
 
     .stat-item {
         margin-bottom: 30px;
+    }
+    
+    /* 2) Corrección: Centrado de números en estadísticas */
+    .stat-number {
+        text-align: center;
+        width: 100%;
+        display: block;
     }
 
     .video-container {
@@ -464,13 +537,15 @@
 
     .contact-info {
         margin-bottom: 40px;
-        text-align: center;
+        /* 5) Corrección: Alineación a la izquierda de la información de contacto */
+        text-align: left;
     }
 
     .contact-details {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* 5) Corrección: Alineación a la izquierda */
+        align-items: flex-start;
     }
 
     .contact-form {
@@ -548,6 +623,23 @@
         right: 20px;
         bottom: 20px;
     }
+    
+    /* 3) Corrección: Alineación a la izquierda de la lista de características del ebook */
+    .feature-list {
+        text-align: left;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        flex-direction: row;
+    }
+    
+    .feature-item i {
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
 }
 
 /* Ajustes para pantallas extremadamente pequeñas (menos de 400px) */
@@ -568,15 +660,16 @@
         height: 520px;
     }
 
+    /* 3) Corrección: Alineación a la izquierda de las características del ebook en pantallas muy pequeñas */
     .feature-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .feature-item i {
-        margin-bottom: 10px;
-        margin-right: 0;
+        margin-right: 15px;
+        margin-bottom: 0;
     }
 }
 
@@ -617,19 +710,46 @@
         width: 70%;
     }
    
+    /* 2) Corrección: Centrado de números en estadísticas */
     .stat-number {
-        min-height: 40px; /* Ajusta este valor según el tamaño de tu fuente y el número más grande */
-        width: 60px; /* Ajusta este valor según el ancho del número más grande */
+        min-height: 40px;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+    
+    /* 1) Corrección: Alineación a la izquierda en Sobre Mi */
+    .about-content {
+        text-align: left;
+    }
+    
+    /* 3) Corrección: Alineación a la izquierda de la lista de características del ebook */
+    .feature-list {
+        text-align: left;
+    }
+    
+    .feature-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
     }
 }
 
 @media (width: 1024px) {
     .about-section, .ebook-container {
         gap: 40px;
+    }
+    
+    /* 1) Corrección: Alineación a la izquierda en Sobre Mi */
+    .about-content {
+        text-align: left;
+    }
+    
+    .section-title::after {
+        left: 0;
+        transform: translateX(0);
     }
 }
 
@@ -681,9 +801,10 @@
         font-size: 3rem;
     }
 
+    /* 1) Corrección: Alineación a la izquierda en Sobre Mi */
     .about-section {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
 
     .about-content {
@@ -697,25 +818,37 @@
     }
 
     .section-title::after {
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        transform: translateX(0);
     }
 
+    /* Contenedor del ebook */
     .ebook-container {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
 
     .ebook-content {
         max-width: 100%;
     }
 
-    .feature-list, .ebook-section h2, .ebook-content p {
-        text-align: center;
+    /* 3) Corrección: Alineación a la izquierda de la lista de características del ebook */
+    .feature-list, .ebook-content p {
+        text-align: left;
+    }
+    
+    .ebook-section h2 {
+        text-align: left;
     }
 
     .feature-item {
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+    }
+    
+    .feature-item i {
+        margin-right: 15px;
     }
 
     .subscription-form {
@@ -783,12 +916,13 @@
         flex: 0 0 45%;
     }
 
-   /* Centrar los números de estadísticas */
+    /* 2) Corrección: Centrado de números en estadísticas */
     .stat-number {
         text-align: center;
+        width: 100%;
     }
 
-    /* Alinear a la izquierda el texto de características del E-book */
+    /* 3) Corrección: Alineación a la izquierda del texto de características del E-book */
     .feature-list {
         text-align: left;
     }
@@ -797,19 +931,38 @@
         text-align: left;
     }
 
-    /* Alinear a la izquierda los iconos y texto de Contacto */
+    /* 5) Corrección: Alineación a la izquierda de los iconos y texto de Contacto */
     .contact-item {
         display: flex;
         align-items: flex-start;
+        text-align: left;
     }
 
     .contact-icon {
         margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contact-text {
+        text-align: left;
     }
 
     /* Asegurar que el texto "Tu mensaje" tenga la tipografía del proyecto */
     textarea {
         font-family: inherit; /* Hereda la tipografía del body */
+    }
+    
+    /* 4) Corrección: Centrado de iconos y subtítulos en Pilares */
+    .pillar-card {
+        text-align: center;
+    }
+    
+    .pillar-icon {
+        margin: 0 auto 15px auto;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -853,158 +1006,51 @@
     }
 }
 
-@media (max-width: 399px) {
-    .hero h1 {
-        font-size: 1.7rem;
-    }
-
-    .hero p {
-        font-size: 0.95rem;
-    }
-
-    .section-title {
-        font-size: 1.6rem;
-    }
-
-    .testimonial-slider {
-        height: 520px;
-    }
-
-    .feature-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .feature-item i {
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-}
-
-@media (max-height: 500px) and (orientation: landscape) {
-    .hero {
-        height: auto;
-        min-height: 120vh;
-        padding: 120px 5% 60px;
-    }
-
-    .navbar {
-        padding: 10px 5%;
-    }
-
-    .nav-links.active {
-        overflow-y: auto;
-        max-height: 80vh;
-    }
-}
-
-@supports (padding: max(0px)) {
-    .navbar {
-        padding-left: max(5%, env(safe-area-inset-left));
-        padding-right: max(5%, env(safe-area-inset-right));
-    }
-
-    body {
-        padding-top: env(safe-area-inset-top);
-        padding-bottom: env(safe-area-inset-bottom);
-    }
-}
-
-@media (width: 768px) {
-    .video-container {
-        width: 70%;
-    }
-}
-
-@media (width: 1024px) {
-    .about-section, .ebook-container {
-        gap: 40px;
-    }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-       only screen and (min-resolution: 192dpi) {
-    body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .form-input, .newsletter-input {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-}
-
-@media print {
-    .navbar, .hero, .social-icons, .btn, .video-section,
-    .telegram-section, .testimonials-section, .contact-form,
-    .footer, .back-to-top {
-        display: none !important;
-    }
-
-    body {
-        background-color: white;
-        color: black;
-    }
-
-    .about-section, .services-section, .pillars-section, .ebook-section {
-        padding: 20px;
-        page-break-inside: avoid;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-}
-
 /* Mobile Navigation Animation Styles */
 .nav-links {
     display: flex;
     transition: all 0.5s ease;
-  }
+}
   
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .nav-links {
-      position: fixed;
-      flex-direction: column;
-      background: rgba(0, 0, 0, 0.9);
-      width: 100%;
-      top: -100%; /* Start off-screen */
-      left: 0;
-      padding: 80px 0 30px;
-      z-index: 50;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-20px);
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        top: -100%; /* Start off-screen */
+        left: 0;
+        padding: 80px 0 30px;
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     }
   
     .nav-links.active {
-      top: 0;
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-      animation: fadeInDown 0.5s ease forwards;
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        animation: fadeInDown 0.5s ease forwards;
     }
   
     .nav-links.closing {
-      animation: fadeOutUp 0.5s ease forwards;
+        animation: fadeOutUp 0.5s ease forwards;
     }
   
     .nav-links li {
-      margin: 15px 0;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(10px);
+        margin: 15px 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(10px);
     }
   
     .nav-links.active li {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.4s ease;
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.4s ease;
     }
   
     /* Add staggered delay for each menu item */
@@ -1014,31 +1060,31 @@
     .nav-links.active li:nth-child(4) { transition-delay: 0.4s; }
     .nav-links.active li:nth-child(5) { transition-delay: 0.5s; }
     .nav-links.active li:nth-child(6) { transition-delay: 0.6s; }
-  }
+}
   
-  /* Animation Keyframes */
-  @keyframes fadeInDown {
+/* Animation Keyframes */
+@keyframes fadeInDown {
     from {
-      opacity: 0;
-      top: -100%;
-      transform: translateY(-20px);
+        opacity: 0;
+        top: -100%;
+        transform: translateY(-20px);
     }
     to {
-      opacity: 1;
-      top: 0;
-      transform: translateY(0);
+        opacity: 1;
+        top: 0;
+        transform: translateY(0);
     }
-  }
+}
   
-  @keyframes fadeOutUp {
+@keyframes fadeOutUp {
     from {
-      opacity: 1;
-      top: 0;
-      transform: translateY(0);
+        opacity: 1;
+        top: 0;
+        transform: translateY(0);
     }
     to {
-      opacity: 0;
-      top: -100%;
-      transform: translateY(-20px);
+        opacity: 0;
+        top: -100%;
+        transform: translateY(-20px);
     }
-  }
+}
