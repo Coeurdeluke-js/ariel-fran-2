@@ -284,11 +284,16 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
+/* Corregido: Centrar números del contador respecto a su texto */
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
     color: #4f9cf9;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
 }
 
 .stat-text {
@@ -601,16 +606,21 @@ h1, h2, h3, h4 {
     background-color: #303030;
 }
 
+/* Corregido: Centrar iconos de la sección de pilares */
 .pillar-icon {
     font-size: 40px;
     color: #4f9cf9;
     margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .pillar-title {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #fefefe;
+    text-align: center;
 }
 
 .pillar-description {
@@ -822,6 +832,7 @@ h1, h2, h3, h4 {
     flex: 1;
 }
 
+/* Corregido: Uniformidad de tipografía en el formulario de contacto */
 .form-control {
     width: 100%;
     padding: 15px;
@@ -833,6 +844,7 @@ h1, h2, h3, h4 {
     margin-bottom: 20px;
     transition: all 0.3s ease;
     resize: vertical;
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-control:focus {
@@ -843,6 +855,7 @@ h1, h2, h3, h4 {
 
 .form-control::placeholder {
     color: rgba(254, 254, 254, 0.5);
+    font-family: 'Poppins', sans-serif;
 }
 
 textarea.form-control {
@@ -1012,6 +1025,7 @@ footer {
     color: #fefefe;
     font-size: 14px;
     border-radius: 5px 0 0 5px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .newsletter-input:focus {
