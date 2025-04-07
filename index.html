@@ -118,6 +118,57 @@
         </div>
     </section>
 
+   <section id="ebook" class="ebook-section">
+        <div class="ebook-container">
+            <div class="ebook-content">
+                <h2>Descarga mi E-book gratuito</h2>
+                <p>"Manual de Negocios digitales: Una introducción realista" - La guía práctica que te ayudará a iniciar tu camino emprendedor con bases sólidas.</p>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Técnicas para identificar oportunidades de negocio</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Ejercicios prácticos para desarrollar mentalidad emprendedora</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Sistema de hábitos para la disciplina y productividad</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Planificador de metas y objetivos imprimible</span>
+                    </div>
+                </div>
+                <div class="subscription-form">
+                    <h3 class="form-title">Descarga tu e-book ahora</h3>
+                    <form id="ebookForm">
+                        <div class="form-group">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-input" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="Tu correo electrónico" required>
+                        </div>
+                        <button type="button" class="form-submit" id="ebookButton">Obtener E-book</button>
+                        <p class="privacy-text">Tus datos están seguros. No compartimos tu información con terceros.</p>
+                    </form>
+                </div>
+            </div>
+            <div class="ebook-image">
+                <img src="ebook-cover.png" alt="E-book: Manual de Negocios digitales: Una introducción realista" class="ebook-mockup">
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById('ebookButton').addEventListener('click', function() {
+            window.location.href = 'ebook.html';
+        });
+    </script>
+    
     <section class="pillars-section">
         <div class="section-header">
             <h2>Los 3 pilares de mi método</h2>
