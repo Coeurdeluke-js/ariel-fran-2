@@ -1148,3 +1148,68 @@ footer {
     align-items: center;
     text-align: center;
 }
+
+/* Estilos adicionales específicos para esta página */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%;
+}
+
+.card {
+    background-color: #252525;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+.download-button {
+    background-color: #4f9cf9;
+    color: #fefefe;
+    padding: 15px 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(79, 156, 249, 0.3);
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 20px; /* Agregado margen inferior */
+}
+
+.download-button:hover {
+    background-color: #3d7dd1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 156, 249, 0.4);
+}
+
+.download-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #fefefe;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.back-button {
+    background-color: transparent;
+    border: 2px solid #4f9cf9; /* Agregado borde azul */
+    color: #4f9cf9;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 14px 20px; /* Agregado padding para mejor apariencia */
+    border-radius: 25px; /* Agregado borde redondeado */
+}
